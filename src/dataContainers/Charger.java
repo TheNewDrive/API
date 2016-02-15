@@ -1,9 +1,12 @@
 /**
  * https://projectlombok.org/features/GetterSetter.html
  */
-package dataContainers;
-import dataTypes.*;
 
+package dataContainers;
+
+import java.util.Date;
+import dataTypes.Connectors;
+import dataTypes.Status;
 import lombok.Getter;
 
 /**
@@ -12,19 +15,18 @@ import lombok.Getter;
  *
  */ 
 public class Charger {
-	/**
-	 * The id of the charger
-	 * @param returns the internal charger id
-	 */
-	@Getter private int id;
-	
-	/**
-	 * 
-	 */
-	@Getter private float longitude;
-	@Getter private float latitude;
-	@Getter private Connectors connector = Connectors.unknown;
-	@Getter private Status status = Status.unknown; 
-	@Getter private String notes;
-	@Getter private int companyId;
+
+  /**
+   * The id of the charger
+   * @param returns the internal charger id
+   */
+  @Getter private int id;
+  @Getter private Coords coordinates;
+  @Getter private Connectors connector = Connectors.unknown;
+  @Getter private Status status = Status.unknown; 
+  @Getter private String notes;
+  @Getter private int companyId;
+
+  @Getter private Date updated;
+  @Getter private Date vallid;
 }

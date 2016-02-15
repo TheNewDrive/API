@@ -1,6 +1,3 @@
-/**
- * 
- */
 package dataTypes;
 
 /**
@@ -8,10 +5,14 @@ package dataTypes;
  *
  */
 public enum Status {
-	free(1), inUse(2), broken(3), unknown(0);
-	
-	private final int status;
-	Status(int status){ this.status = status; }
-	
-	public int getStatus(){ return this.status; }
+  free(1), inUse(2), broken(3), unknown(0);
+
+  private final int status;
+  Status(int status) {
+    this.status = status;
+  }
+
+  public int getStatus() {
+    return this.status;
+  }
 }
