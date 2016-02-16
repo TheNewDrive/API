@@ -29,4 +29,10 @@ public class Charger {
 
   @Getter private Date updated;
   @Getter private Date vallid;
+  
+  public String toString() {
+
+    return "id: " + id + " Coords: " + coordinates.toString();
+  }
+  
 }

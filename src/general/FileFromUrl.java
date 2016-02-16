@@ -17,7 +17,13 @@ import java.nio.channels.ReadableByteChannel;
  *
  */
 public class FileFromUrl {
-  public static boolean Download(String url, String fileName) {
+  /**
+   * Downloads a file from an external server
+   * @param url the url to the file
+   * @param fileName The local file name
+   * @return true on success else false
+   */
+  public static boolean download(String url, String fileName) {
     URL website;
     try {
       // source: http://stackoverflow.com/questions/921262/how-to-download-and-save-a-file-from-internet-using-java
