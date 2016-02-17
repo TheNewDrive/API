@@ -8,6 +8,7 @@ import java.util.Date;
 import dataTypes.Connectors;
 import dataTypes.Status;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author ing. R.J.H.M. Stevens
@@ -20,15 +21,15 @@ public class Charger {
    * The id of the charger
    * @param returns the internal charger id
    */
-  @Getter private int id;
-  @Getter private Coords coordinates;
-  @Getter private Connectors connector = Connectors.unknown;
-  @Getter private Status status = Status.unknown; 
-  @Getter private String notes;
-  @Getter private int companyId;
+  @Setter @Getter private int id;
+  @Setter @Getter private Coords coordinates;
+  @Setter @Getter private Connectors connector = Connectors.unknown;
+  @Setter @Getter private Status status = Status.unknown; 
+  @Setter @Getter private String notes;
+  @Setter @Getter private int companyId;
 
-  @Getter private Date updated;
-  @Getter private Date vallid;
+  @Setter @Getter private Date updated;
+  @Setter @Getter private Date vallid;
   
   public String toString() {
 
