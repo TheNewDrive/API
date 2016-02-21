@@ -124,7 +124,12 @@ public class OpenChargeMapOrg implements ExternalData {
             line = line.replaceAll(",", "");                /* remove the comma tag */
             line = line.replaceAll(" ", "");                /* remove the space tag */
             tempCharger.getCoordinates().setLongitude(Double.parseDouble(line));
+          }
         }
+        else if(line.contains("\"UserComments\": [") || line.contains("\"Connections\": [") || line.contains("\"MediaItems\": [")){
+          while (!line.contains("]") && line != null){
+            line = buffer.readLine();
+          }
         }
         
       }
