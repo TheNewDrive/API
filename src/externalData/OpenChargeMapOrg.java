@@ -136,6 +136,12 @@ public class OpenChargeMapOrg implements ExternalData {
     } catch (IOException e) {
       return null;
     }
+    try {
+      buffer.close();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
     return chargers.toArray(new Charger[chargers.size()]);
   }
 
