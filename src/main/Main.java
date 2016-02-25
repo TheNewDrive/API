@@ -35,6 +35,7 @@ public class Main {
 static class MyHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+      @SuppressWarnings("unchecked")
       Map<String, String> params = (Map<String, String>)exchange.getAttribute("parameters");
         String response = "wrong url params";
         if (params.containsKey("long") && params.containsKey("lat")){
